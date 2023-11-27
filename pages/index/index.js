@@ -11,7 +11,7 @@ Component({
     messageList: [],
     loading:false,
     apiKey:'sk-',
-    baseUrl:'https://api.openai.com',
+    baseUrl:'https://api.chatanywhere.com.cn',
     scrollTop:0
   },
   ready(){
