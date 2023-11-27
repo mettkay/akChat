@@ -1,0 +1,49 @@
+.mask-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999999;
+  background: #00000088;
+}
+
+.hint-view{
+  width: 600rpx;
+  padding: 0 32rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  animation: popup 0.3s;
+}
+
+.hint-title{
+  color: #222;
+  font-size: 38rpx;
+  margin-top: 40rpx;
+}
+
+.hint-content{
+  color: #222;
+  font-size: 30rpx;
+  line-height: 1.5;
+  margin-top: 40rpx;
+}
+
+.btn-ok{
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 40rpx auto;
+  text-align: center;
+  background-color: #5d5cde;
+  color: #fff;
+  border-radius: 50rpx;
+  transition: 0.3s;
+}
+
+.btn-ok:active{
+  background-color: #15159b;
+}

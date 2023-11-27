@@ -1,0 +1,13 @@
+
+<view class="mask-view" wx:if="{{show}}">
+  <view class="hint-view">
+    <view class="hint-title">欢迎来到akChat</view>
+    <view class="hint-content">
+      <text>本项目主要目的为学习AI聊天。
+      该项目高度重视隐私，致力于保护其用户的隐私。该项目不会以任何方式收集、记录或存储用户信息及输入的任何文本。
+      本项目所有聊天记录均存储在本地。且只保留最近十条对话记录！
+      </text>
+    </view>
+    <view class="btn-ok" bindtap="confirm">我知道了</view>
+  </view>
+</view>

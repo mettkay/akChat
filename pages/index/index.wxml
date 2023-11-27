@@ -1,0 +1,29 @@
+
+<view class="container">
+
+  <scroll-view 
+    class="chat-content" 
+    scroll-y="{{true}}"
+    scroll-top="{{scrollTop}}"
+    scroll-anchoring="{{true}}"
+    show-scrollbar="{{false}}"
+    style="height:calc(100vh - 124rpx - {{iosBottom}}px);padding-bottom:calc({{focusHeight}}px + 124rpx + {{iosBottom}}px)">
+    <view class="chat-item" wx:for="{{messageList}}" wx:key="index">
+      <view class="chat-self" wx:if="{{item.role === 'user'}}">{{item.content}}</view>
+      <view class="chat-result" wx:else>{{item.content}}</view>
+    </view>
+    <view class="loading" wx:if="{{loading}}">
+      <loading></loading>
+    </view>
+  </scroll-view>
+
+  <popups></popups>
+
+  <view class="publish-box">
+    <view class="bottom-control">
+      <input class="input-dom {{inputValue?'input-dom-value':''}}" value="{{inputValue}}" adjust-position="{{false}}" focus="{{hasFocus}}" bindinput="handleInput" bindconfirm="sendMessage" bindfocus="handleFocus" bindblur="handleBlur" placeholder="开始聊天" />
+      <view bindtap="sendMessage" class="btn-send {{inputValue?'btn-send-show':''}}">发送</view>
+    </view>
+    <view style="height:{{focusHeight}}rpx;transition:0.2s"></view>
+  </view>
+</view>

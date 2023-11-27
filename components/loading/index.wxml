@@ -1,0 +1,10 @@
+
+<view class="container">
+
+  <div class="com__box">
+    <div class="loading">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</view>
