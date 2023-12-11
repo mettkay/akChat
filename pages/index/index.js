@@ -10,7 +10,7 @@ Component({
     iosBottom:0,
     messageList: [],
     loading:false,
-    apiKey:'sk-qWcfQreFZnQZDK1iCdTJHtw03ZDVaulY5ORpZqZ8gWn18b9Y',
+    apiKey:'sk-',
     baseUrl:'https://api.chatanywhere.com.cn',
     scrollTop:0
   },
