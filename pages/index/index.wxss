@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 200px;
+  box-sizing: border-box;
 }
 
 .chat-item{
@@ -23,7 +24,7 @@
   font-size: 32rpx;
   color: #222;
   word-break: break-all;
-  animation: popup 0.3s;
+  animation: popupLeft 0.5s;
 }
 
 .chat-self{
@@ -36,7 +37,7 @@
   font-size: 32rpx;
   color: #fff;
   word-break: break-all;
-  animation: popup 0.3s;
+  animation: popupRight 0.5s;
 }
 
 

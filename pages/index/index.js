@@ -27,7 +27,6 @@ Component({
     }
 
     let messageList = wx.getStorageSync('messageList') || []
-    // messageList = messageList.concat(messageList).concat(messageList).concat(messageList).concat(messageList).concat(messageList)
     this.setData({messageList})
 
     this.setData({scrollTop:99999})
@@ -61,6 +60,9 @@ Component({
     handleFocus(e){
       const keyboard = e.detail.height;
       this.setData({'focusHeight':Math.ceil(keyboard/this.data.scale)})
+      // this.setData({'focusHeight':400})
+      
+      this.scrollToBottom()
     },
     scrollToBottom(){
       wx.nextTick(()=>{
@@ -79,7 +81,11 @@ Component({
     async sendMessages() {
       let url = this.data.baseUrl+'/v1/chat/completions'
 
-      let messages = this.data.messageList
+      const system = [{
+        role:'system',
+        content:'你喜欢赞美和夸奖别人'
+      }]
+      let messages = system.concat(this.data.messageList)
 
       wx.request({
         url, 
@@ -88,7 +94,7 @@ Component({
           n: 1,
           model: "gpt-3.5-turbo",
           messages,
-          max_tokens: 100,
+          max_tokens: 300,
         },
         timeout: 600000,
         header: {

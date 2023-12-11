@@ -10,3 +10,24 @@
   }
 }
 
+@keyframes popupLeft {
+  from{
+    transform: translateX(-60rpx);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popupRight {
+  from{
+    transform: translateX(60rpx);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

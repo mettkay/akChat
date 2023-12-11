@@ -7,7 +7,7 @@
     scroll-top="{{scrollTop}}"
     scroll-anchoring="{{true}}"
     show-scrollbar="{{false}}"
-    style="height:calc(100vh - 124rpx - {{iosBottom}}px);padding-bottom:calc({{focusHeight}}px + 124rpx + {{iosBottom}}px)">
+    style="height:100vh;padding-bottom:calc({{focusHeight}}rpx + 124rpx + {{iosBottom}}px)">
     <view class="chat-item" wx:for="{{messageList}}" wx:key="index">
       <view class="chat-self" wx:if="{{item.role === 'user'}}">{{item.content}}</view>
       <view class="chat-result" wx:else>{{item.content}}</view>
